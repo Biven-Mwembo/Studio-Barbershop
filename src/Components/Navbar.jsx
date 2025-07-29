@@ -68,7 +68,17 @@ function Navbar() {
               <li><button onClick={() => handleNavigation('/about')} className={styles.mobileNavButton}>About us</button></li>
               <li><button onClick={() => handleNavigation('/services')} className={styles.mobileNavButton}>Services</button></li>
               <li><button onClick={() => handleNavigation('/contact')} className={styles.mobileNavButton}>Contact</button></li>
-              <li><button onClick={() => handleNavigation('https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&share=true&pId=791020')} className={styles.mobileNavButton}>Book Now</button></li>
+              <li>
+  <a
+    href="https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&share=true&pId=791020"
+    className={styles.mobileNavButton}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book Now
+  </a>
+</li>
+
             </ul>
           </nav>
         </div>
