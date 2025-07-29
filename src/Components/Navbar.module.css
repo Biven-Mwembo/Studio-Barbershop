@@ -1,0 +1,305 @@
+/* src/Components/Navbar.module.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/blanka');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Ensure it's above other content */
+  background-color: #1b1b1b; /* Dark background from the image */
+  color: rgb(239, 238, 238);
+  height: 130px;
+  margin-top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  padding: 0.8rem 0rem; /* Adjust padding to match image */
+  font-family: 'Poppins', sans-serif; /* Apply font */
+  font-weight: 200;
+  font-style: normal;
+  border: 3px solid black;
+}
+
+.headerContent {
+  max-width: 1200px; /* Max width for content */
+  margin: 0; /* Center content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+  color: #ebeaea;
+}
+
+/* Logo styles */
+.logo {
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img,
+.logoImage {
+  width: 150px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .logo img,
+  .logoImage {
+    width: 100px;
+  }
+}
+
+/* Company Name */
+.companyName {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  white-space: nowrap;
+  pointer-events: none; /* Prevent blocking hamburger clicks */
+
+  /* Mobile: absolutely centered */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 769px) {
+  /* Desktop: align company name next to logo on the left */
+  .companyName {
+    position: static;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+/* Desktop navigation */
+.desktopNav {
+  display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  color: #ebeaea;
+  margin: 0;
+  gap: 2.5rem; /* Space between nav items */
+  /* Mobile: no special centering */
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: #dedcdc;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* LIGHT */
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-transform: unset;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.navButton:hover {
+  color: #083071; /* Yellow highlight on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.navButton:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+/* Right section for Book Now button and hamburger */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Book Now button */
+.bookNowButton {
+  background-color: #102771; /* Yellow background */
+  color: #fdfcfc; /* Dark text */
+  border: none;
+  padding: 0.75rem 1.5rem; /* Padding */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem;
+  font-weight: 700; /* Bold */
+  cursor: pointer;
+  text-transform: unset;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bookNowButton:hover {
+  background-color: #0e0d0d; /* Darker yellow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bookNowButton:active {
+  transform: translateY(0); /* Reset on click */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .bookNowButton {
+    display: none;
+  }
+}
+
+/* Hamburger menu */
+.hamburgerMenu {
+  background: none;
+  border: none;
+  color: #961515;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  display: block; /* Show on mobile */
+}
+
+@media (min-width: 768px) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
+
+/* Mobile Menu Overlay Styles */
+.mobileMenuOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95); /* Darker overlay for mobile */
+  z-index: 99; /* Below header, above content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out; /* Fade in animation */
+}
+
+.closeMenuButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #fff;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* LIGHT */
+  font-size: 1rem;
+  text-align: center;
+  color: #ebeaea;
+}
+
+.mobileNavButton {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+
+.mobileNavButton:hover {
+  color: #facc15;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Title and subtitle */
+.Title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 50px;
+  font-family: 'Blanka', sans-serif;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.subtitle {
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 4px;
+  letter-spacing: 5.5px;
+}
+
+/* -------- DESKTOP LAYOUT OVERRIDES -------- */
+@media (min-width: 769px) {
+  /* Layout: logo+company left, nav center, book button right */
+
+  .headerContent {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Align logo and company name to the left */
+  .logo {
+    order: 1;
+  }
+
+  .companyName {
+    order: 1;
+  }
+
+  /* Center nav list */
+  .desktopNav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: 2;
+  }
+
+  /* Right align book now button */
+  .rightSection {
+    order: 3;
+  }
+}
+@media (min-width: 769px) {
+  .companyName {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+.servicesSection {
+  background-color: #000;
+  color: #fff;
+  padding: 85px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  flex: 1;
+  position: relative;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.cardPrice {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: left;
+}
+
+.highlight {
+  border: 2px solid #961515;
+  background-color: #1a1a1a;
+}
+
+.highlight .cardTitle {
+  color: #ffffff;
+}
+
+.bookIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 1;
+  }
+
+  .bookIcon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+.card:hover {
+  transform: translateY(-4px);
+  border: 2px solid #961515;
+  background-color: #1a1a1a;
+}
+
+.card:hover .cardTitle {
+  color: #ffffff;
+}
