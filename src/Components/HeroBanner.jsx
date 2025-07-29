@@ -61,15 +61,15 @@ function HeroBanner() {
 
 
   const services = [
-    { name: 'Fade Haircuts', price: 'R150', img: '/images/st9.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-service1' }, 
-    { name: 'Haircut + Black Dye', price: 'R180', img: '/images/st2.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-service1' },
+    { name: 'Fade Haircuts', price: 'R150', img: '/images/st9.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A14094433&share=true&pId=791020' }, 
+    { name: 'Haircut + Black Dye', price: 'R180', img: '/images/st2.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A14177088&share=true&pId=791020' },
     { name: 'Haircut + Bleach (Short Hair)', price: 'From R200', img: '/images/st5.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A12745866&share=true&pId=791020' },
     { name: 'Women Haircuts', price: 'From R200', img: '/images/st12.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A11859991&share=true&pId=791020'},
     { name: 'Student Only', price: 'R120', img: '/images/st6.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A12631446&share=true&pId=791020 '},
     { name: 'Indian/ Pakistan Hair', price: 'From R250', img: '/images/st14.jpg',link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A20738050&share=true&pId=791020' },
-    { name: 'Kids Haircuts', price: 'R80', img: '/images/st4.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-service1'},
-    { name: 'Shaves (ChisKop)', price: 'R80', img: '/images/st11.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-service1'},
-    { name: 'Scisor Cut', price: 'R250', img: '/images/st3.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-service1'},
+    { name: 'Kids Haircuts', price: 'R80', img: '/images/st4.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A11860032&share=true&pId=791020'},
+    { name: 'Shaves (ChisKop)', price: 'R80', img: '/images/st11.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&oiid=sv%3A11860015&share=true&pId=791020'},
+    { name: 'Scisor Cut', price: 'R250', img: '/images/st3.jpg' ,link: 'https://www.fresha.com/book-now/the-studio-barbershop-v77k81gt/services?lid=841430&eid=2148098&oiid=sv%3A11860009&share=true&pId=791020'},
   ];
 
   const handleSelect = (service) => {
